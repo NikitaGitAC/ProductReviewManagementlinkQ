@@ -8,7 +8,7 @@
 
             List<ProductReview> ProductReviewList = new List<ProductReview>
             {
-                new ProductReview(){ProductID=1,UserID=1,Rating=5,Review="Excellent",IsLike=true},
+                 new ProductReview(){ProductID=1,UserID=1,Rating=5,Review="Excellent",IsLike=true},
                 new ProductReview(){ProductID=2,UserID=2,Rating=4,Review="Very good",IsLike=true},
                 new ProductReview(){ProductID=3,UserID=3,Rating=3,Review="Good",IsLike=true },
                 new ProductReview(){ProductID=10,UserID=4,Rating=2,Review=" Poor",IsLike=true},
@@ -36,10 +36,13 @@
 
             };
 
-            foreach (var Records in ProductReviewList)
-            {
-                Console.WriteLine("{0} {1} {2} {3} {4}", Records.ProductID, Records.UserID, Records.Rating, Records.Review, Records.IsLike);
-            }
+            //foreach( var Records in ProductReviewList)
+            //{
+            //    Console.WriteLine("{0} {1} {2} {3} {4}", Records.ProductID,Records.UserID,Records.Rating,Records.Review,Records.IsLike);
+            //}
+
+            Management management = new Management();
+            management.Top3Records(ProductReviewList);
         } 
     }
 
